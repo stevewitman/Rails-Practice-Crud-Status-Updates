@@ -1,0 +1,16 @@
+<h1>Show Status</h1>
+<%= notice %>
+
+
+<p>
+  User: <%= @message.user %>
+</p>
+<p>
+  Status: <%= @message.status %>
+</p>
+<p>
+  Likes: <%= @message.likes %>
+</p>
+<%= link_to "Index", messages_path %> |
+<%= link_to "Edit", edit_message_path(@message) %> |
+<%= link_to "Delete", message_path, method: :delete, data: { confirm: 'Are you sure?' } %>
